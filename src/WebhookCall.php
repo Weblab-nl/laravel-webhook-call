@@ -5,6 +5,7 @@ namespace Weblab\WebhookCall;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\WebhookServer\Exceptions\CouldNotCallWebhook;
 use Spatie\WebhookServer\WebhookCall as SpatieWebhookCall;
+use Weblab\WebhookCall\BackoffStrategy\WeblabBackoffStrategy;
 use Weblab\WebhookCall\Models\Webhook;
 use Weblab\WebhookCall\Models\WebhookEvent;
 
@@ -34,8 +35,10 @@ class WebhookCall extends SpatieWebhookCall
     /**
      * Set the URL and secret for the webhook call.
      *
-     * @param  Webhook  $webhook The webhook model
+     * @param Webhook $webhook The webhook model
+     *
      * @return  static            The instance of this class, so we can chain methods
+     * @throws \Spatie\WebhookServer\Exceptions\InvalidBackoffStrategy
      */
     public function webhook(Webhook $webhook): static
     {
@@ -48,6 +51,8 @@ class WebhookCall extends SpatieWebhookCall
         } else {
             $this->doNotSign();
         }
+
+        $this->useBackoffStrategy(WeblabBackoffStrategy::class);
 
         // set the webhook event model
         $this->webhook = $webhook;
