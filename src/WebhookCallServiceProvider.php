@@ -19,7 +19,6 @@ class WebhookCallServiceProvider extends PackageServiceProvider
      * Configure the package.
      *
      * @param  Package  $package The package to configure
-     * @return  void
      */
     public function configurePackage(Package $package): void
     {

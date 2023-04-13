@@ -13,31 +13,25 @@ class WebhookCall extends SpatieWebhookCall
 {
     /**
      * The webhook model.
-     *
-     * @var Webhook
      */
     protected Webhook $webhook;
 
     /**
      * The webhook event model.
-     *
-     * @var WebhookEvent
      */
     protected WebhookEvent $webhookEvent;
 
     /**
      * The related entity for the webhook call.
-     *
-     * @var Model
      */
     protected Model $entity;
 
     /**
      * Set the URL and secret for the webhook call.
      *
-     * @param Webhook $webhook The webhook model
-     *
+     * @param  Webhook  $webhook The webhook model
      * @return  static            The instance of this class, so we can chain methods
+     *
      * @throws \Spatie\WebhookServer\Exceptions\InvalidBackoffStrategy
      */
     public function webhook(Webhook $webhook): static

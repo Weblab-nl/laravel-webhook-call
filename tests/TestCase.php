@@ -64,7 +64,6 @@ class TestCase extends Orchestra
     /**
      * Create additional tables
      *
-     * @param ...$tableNames
      * @return void
      */
     protected function createTables(...$tableNames)
