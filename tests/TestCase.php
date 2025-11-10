@@ -10,6 +10,8 @@ use Weblab\WebhookCall\WebhookCallServiceProvider;
 
 class TestCase extends Orchestra
 {
+    public static $latestResponse = null;
+
     protected function setUp(): void
     {
         parent::setUp();
