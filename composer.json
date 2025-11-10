@@ -22,16 +22,22 @@
     },
     "require-dev": {
         "laravel/pint": "^1.0",
-        "nunomaduro/collision": "^v8.8.2",
-        "larastan/larastan": "^3.8",
-        "orchestra/testbench": "^10.0",
-        "pestphp/pest": "^4.1",
-        "pestphp/pest-plugin-laravel": "^4.0",
+        "nunomaduro/collision": "^v7.9",
+        "larastan/larastan": "^v2.11.2",
+        "orchestra/testbench": "^8.0",
+        "pestphp/pest": "^2.0",
+        "pestphp/pest-plugin-laravel": "^v2.0",
         "phpstan/extension-installer": "^1.1",
-        "phpstan/phpstan-deprecation-rules": "^2.0",
-        "phpstan/phpstan-phpunit": "^2.0",
-        "phpunit/phpunit": "^12.3"
+        "phpstan/phpstan-deprecation-rules": "^1.2.1",
+        "phpstan/phpstan-phpunit": "^1.0",
+        "phpstan/phpstan": "^1.12.32"
     },
+
+
+
+
+
+
     "autoload": {
         "psr-4": {
             "Weblab\\WebhookCall\\": "src",
