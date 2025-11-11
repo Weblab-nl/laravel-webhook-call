@@ -32,12 +32,6 @@
         "phpstan/phpstan-phpunit": "^1.0",
         "phpstan/phpstan": "^1.12.32"
     },
-
-
-
-
-
-
     "autoload": {
         "psr-4": {
             "Weblab\\WebhookCall\\": "src",
