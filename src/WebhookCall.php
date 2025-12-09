@@ -26,6 +26,14 @@ class WebhookCall extends SpatieWebhookCall
     protected Model $entity;
 
     /**
+     * @return self
+     */
+    public static function create(): self
+    {
+        return parent::create();
+    }
+
+    /**
      * Set the URL and secret for the webhook call.
      *
      * @param  Webhook  $webhook  The webhook model
