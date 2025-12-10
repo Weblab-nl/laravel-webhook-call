@@ -8,6 +8,9 @@ use Spatie\WebhookServer\WebhookCall as SpatieWebhookCall;
 use Weblab\WebhookCall\Models\Webhook;
 use Weblab\WebhookCall\Models\WebhookEvent;
 
+/**
+ * @method static self create()
+ */
 class WebhookCall extends SpatieWebhookCall
 {
     /**
@@ -24,11 +27,6 @@ class WebhookCall extends SpatieWebhookCall
      * The related entity for the webhook call.
      */
     protected Model $entity;
-
-    public static function create(): self
-    {
-        return parent::create();
-    }
 
     /**
      * Set the URL and secret for the webhook call.
