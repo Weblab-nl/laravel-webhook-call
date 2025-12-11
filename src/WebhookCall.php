@@ -8,6 +8,9 @@ use Spatie\WebhookServer\WebhookCall as SpatieWebhookCall;
 use Weblab\WebhookCall\Models\Webhook;
 use Weblab\WebhookCall\Models\WebhookEvent;
 
+/**
+ * @method static self create()
+ */
 class WebhookCall extends SpatieWebhookCall
 {
     /**
